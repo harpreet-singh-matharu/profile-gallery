@@ -6,7 +6,7 @@
 	
 	$(document).ready(function(){
 		$('.person').on('click', function(){			
-			
+			    
 			$('.person').removeClass('zoomed');		
 			$(this).addClass('zoomed');	
 			
@@ -42,9 +42,24 @@
 		zoom_ = $('.zoomed');
 		sec_img = $('.sec_img');
 		wdth = $(window).width()/sect_lngth+'px';
+		hght1 = $(window).width()/sect_lngth;
 		leftpos = $(window).width()/sect_lngth;
 		
 		hght = wdth;
+		
+		if(!$('.zoomed').length){
+			$('#people').css({
+				'height': hght,
+				'margin-top': -hght1/2 +'px',
+				'top':'50%'				
+			});
+		}else{
+			$('#people').css({
+				'height': '100vh',
+				'margin-top': '0',
+				'top':'0'	
+			});
+		}
 		
 		sec_div.css({
 			'width': wdth,

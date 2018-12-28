@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i'); 
+
 body {
-    font-family: "aktiv-grotesk-std",sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
@@ -19,21 +21,24 @@ img {
 }
 
 body.people section#people {
-    position: relative;
+    position: absolute;
     width: 100%;
-    height: 540px;
-    overflow: hidden;
-    max-width: 1366px;
-    margin-bottom: 70px;
+    height: 100vh;
+    overflow: hidden; 
+	top: 50%;
 }
 
 #page {
-    width: 100%;
-    max-width: 1366px;
+    width: 100%; 
     min-height: 100%;
     height: auto;
     background-color: #fff;
     margin: 0 auto;
+	background: url('../images/bg-2.jpg');
+	background-repeat: no-repeat;
+	overflow:hidden;
+    background-size: cover;
+    background-position: center center;
 }
 
 body.people section#people .person {    
@@ -91,7 +96,7 @@ body.people section#people .person .bio h3 {
     font-weight: 300;
     font-size: 1.2em;
     line-height: 1.4em;
-    color: #4f4f4f;
+    color: #ffffff;
     text-transform: uppercase;
 }
 
@@ -100,7 +105,7 @@ body.people section#people .person .bio h2 {
     font-weight: 900;
     font-size: 2.8em;
     line-height: 1em;
-    color: #4f4f4f;
+    color: #ffffff;
 }
 
 body.people section#people .person .caption .title {
@@ -160,8 +165,8 @@ body.people section#people .person.zoomed .prof_sec{
 	opacity: 1;
     top: 0;
     padding: 5% 8% 10% 6%;
-    color: #4f4f4f;
-    font-size: .9em;
+    color: #ffffff;
+    font-size: 1em;
     line-height: 1.7em;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
