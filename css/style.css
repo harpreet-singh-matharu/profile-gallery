@@ -20,7 +20,7 @@ img {
     border: 0;
 }
 
-body.people section#people {
+.people #people {
     position: absolute;
     width: 100%;
     height: 100vh;
@@ -41,7 +41,7 @@ body.people section#people {
     background-position: center center;
 }
 
-body.people section#people .person {    
+.people #people .person {    
     position: absolute;
     margin: 0;
     padding: 0;
@@ -51,19 +51,19 @@ body.people section#people .person {
 	transform: scale(1);	
 }
 
-body.people section#people .person.prev{
+.people #people .person.prev{
 	left: -20% !important;    
 	transition: 0.6s all;
 	transform: scale(0);	
 }
 
-body.people section#people .person.next{
+.people #people .person.next{
 	left: 100% !important;    
 	transition: 0.6s all;
 	transform: scale(0);
 }
 
-body.people section#people .person img {
+.people #people .person img {
     position: absolute;
     left: 0;
     top: 0;
@@ -74,7 +74,7 @@ body.people section#people .person img {
 	transition: 0.2s ease-in-out;
 }
 
-body.people section#people .person .caption {
+.people #people .person .caption {
     position: relative;
     left: 0;
     top: 100%;
@@ -91,7 +91,7 @@ body.people section#people .person .caption {
     color: #fff;
 }
 
-body.people section#people .person .bio h3 {
+.people #people .person .bio h3 {
     margin: 0 0 .2em 0;
     font-weight: 300;
     font-size: 1.2em;
@@ -100,7 +100,7 @@ body.people section#people .person .bio h3 {
     text-transform: uppercase;
 }
 
-body.people section#people .person .bio h2 {
+.people #people .person .bio h2 {
     margin: 0 0 1em 0;
     font-weight: 900;
     font-size: 2.8em;
@@ -108,13 +108,13 @@ body.people section#people .person .bio h2 {
     color: #ffffff;
 }
 
-body.people section#people .person .caption .title {
+.people #people .person .caption .title {
     position: absolute;
     left: 0;
     bottom: 0;
 }
 
-body.people section#people .person .caption .title h2 {
+.people #people .person .caption .title h2 {
     margin: 0;
     font-weight: 900;
     font-size: 1.4em;
@@ -123,7 +123,7 @@ body.people section#people .person .caption .title h2 {
     text-align: left;
 }
 
-body.people section#people .person .caption .title h3 {
+.people #people .person .caption .title h3 {
     margin: 0;
     font-weight: 300;
     font-size: 1em;
@@ -131,11 +131,11 @@ body.people section#people .person .caption .title h3 {
     text-transform: uppercase;
 }
 
-body.people section#people .person.zoomed img {
+.people #people .person.zoomed img {
     cursor: default;
 }
 
-body.people section#people .person .click_cross {
+.people #people .person .click_cross {
     position: absolute;
     right: 34px;
 	display:none;
@@ -154,7 +154,7 @@ body.people section#people .person .click_cross {
     transform: translate3d(0,0,0.01px);
 }
 	
-body.people section#people .person.zoomed .prof_sec{		
+.people #people .person.zoomed .prof_sec{		
 	display:block;
 	position: absolute;
     top: 0;
@@ -173,12 +173,67 @@ body.people section#people .person.zoomed .prof_sec{
     box-sizing: border-box;
 }
 
+.people #people .view-more .view-profile {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    width: 125px;
+    text-align: center;
+    font-size: 1em;
+    background: white;
+    padding: 12px 8px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: -15px;
+	cursor:pointer;
+}
 
-body.people section#people .person .prof_sec{
+.people #people .person:hover .view-more{
+    top: 0;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.people #people .contact-btn {
+    background: white;
+    box-shadow: none;
+    border: 1px solid #fff;
+    padding: 14px 15px;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.people #people .person.zoomed .view-more{
+	display:none;
+}
+
+.people #people .view-more{
+    top: 100%;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.people #people .person .prof_sec{
 	display:none;
 	opacity:0;
 }
 
-body.people section#people .person.zoomed .click_cross {
+.people #people .person.zoomed .click_cross {
 	display:block;
 }
